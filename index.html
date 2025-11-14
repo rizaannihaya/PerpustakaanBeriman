@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perpustakaan Beriman</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header / Navbar -->
+  <header>
+    <div class="logo"> <img src="image/Biru dan Putih Minimalis Komunitas Baca Buku Logo.png"> Beriman <span>e-Library</span></div> <!--dipakai untuk mengatur teks "SAGA" dan "e-Library"-->
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Beranda</a></li>
+        <li><a href="profil.html">Profil</a></li>
+        <li><a href="layanan.html">Layanan</a></li>
+        <li><a href="informasi.html">Informasi</a></li>
+        <li><a href="koleksi.html">Koleksi</a></li>
+        <li><a href="Myaccount.html">My account</a></li>
+        
+      </ul>
+    </nav>
+    
+    <div class="account">
+      <button class="login-btn" onclick="bukaPopup()">Login</button>
+      <input type="text" placeholder="Search...">
+    </div>
+    
+    
+    <div id="popupLogin" class="popup">
+    
+  <div class="popup-content">
+    <button class="close-btn" onclick="tutupPopup()">X</button>
+    <h3>Form Login</h3>
+    <form>
+      <input type="text" placeholder="Username" required><br>
+      <input type="password" placeholder="Password" required><br>
+      <button type="submit" class="login-submit">Login</button>
+    </form>
+    <p>Belum punya akun? <a href="#">Daftar</a></p>
+  </div>
+</div>
+<script>
+    function bukaPopup() {
+      document.getElementById("popupLogin").style.display = "block";
+    }
+
+    function tutupPopup() {
+      document.getElementById("popupLogin").style.display = "none";
+    }
+
+    window.onclick = function(event) {
+      const popup = document.getElementById("popupLogin");
+      if (event.target === popup) {
+        popup.style.display = "none";
+      }
+    }
+  </script>
+  </header>
+  <!-- BANNER -->
+  <section class="banner">
+    <img src="image/banner (1).png" alt="Perpustakaan">
+    <div class="banner-text">
+      <h1>Perpustakaan<br>Beriman</h1>
+      <p>
+        Sebagai ruang belajar publik, mari manfaatkan perpustakaan untuk meningkatkan wawasan 
+        dan pengetahuan melalui literasi. Jadikan Perpustakaan sebagai sumber ilmu yang mudah 
+        dijangkau dan ramah untuk semua kalangan.
+      </p>
+    </div>
+  </section>
+  
+<section class="welcome">
+  <div class="welcome-text">
+    <h1>Selamat Datang di <br> <span>SAGA e-Library</span></h1>
+    <p>
+      SAGA e-Library hadir sebagai pusat sumber belajar digital yang modern dan
+      mudah diakses oleh seluruh sivitas akademika UIN Salatiga. Dengan koleksi
+      yang terus berkembang, mulai dari e-book, jurnal, repository, hingga bahan
+      ajar multimedia, SAGA e-Library menjadi mitra terbaik dalam mendukung
+      kegiatan akademik, penelitian, dan pengembangan ilmu.
+    </p>
+  </div>
+
+  <div class="welcome-media">
+    <iframe width="100%" height="315"
+      src="https://www.youtube.com/watch?v=cWRncduPSxo"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+      style="border-radius:15px;">
+    </iframe>
+  </div>
+</section>
+
+<section class="content">
+  <div class="news-updates">
+    <h2>📰 News & Updates</h2>
+    <div id="news-list"></div>
+  </div>
+
+  <div class="announcements">
+    <h2>📢 Pengumuman</h2>
+    <div id="announcement-list"></div>
+  </div>
+</section>
+
+<script src="script.js"></script>
+
+
+<!-- Footer -->
+  <footer>
+    <p>Jl. Tentara Pelajar No. 2, Salatiga - (0298) 123456 - Email: library@uin-salatiga.ac.id</p>
+    <p>© Hak Cipta 2022 - Perpustakaan Universitas Islam Negeri Salatiga</p>
+  </footer>
+</body>
+<html>
+
+</html>
